@@ -1,0 +1,52 @@
+//base styles
+@import "./tokens.scss";
+@import "./colors.scss";
+@import "./typography.scss";
+
+// вычисляемые пробелы
+@import "./additional/spacers.scss";
+
+// глобальные функции
+@import "./additional/functions.scss";
+
+//for components
+@import "./element-styles/buttons.scss";
+@import "./element-styles/inputs.scss";
+
+//animatiin global
+@mixin transition-global {
+    transition: 0.8s cubic-bezier(0.215, 0.810, 0.2, 1);
+}
+
+//additional
+
+@mixin reset {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin fixed-login {
+    display: inline-flex;
+    width: 14.75rem;
+}
+
+@mixin card-wrapper {
+    background: $white;
+    box-shadow: $card-shadow;
+    border-radius: $radi-m;
+    padding: $space-l;
+    display: flex;
+}
+
+@mixin flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
