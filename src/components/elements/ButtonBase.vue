@@ -1,9 +1,11 @@
 <template>
   <component
+    v-bind="$attrs"
     :is="type"
     :href="href"
     :type="submit"
     :class="['button', size, priority, font, disabled]"
+   
   >
     <icon-base class="icon">
       <Check />

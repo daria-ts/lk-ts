@@ -5,6 +5,7 @@
   >
   <label>{{ label }}</label>
   <input
+    v-bind="$attrs"
     :disabled="disabled"
     :class="field"
     :value="modelValue"
