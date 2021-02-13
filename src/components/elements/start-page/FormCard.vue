@@ -1,9 +1,9 @@
 <template>
   <div class="form-card">
     <LogoFull @click="showLogin = false" bg="logo-on-white"></LogoFull>
-    <FormCardLogin v-if="showLogin"/>
-    <FormCardSignup v-else/>
-    <FormCardLinks @click="showLogin = true"/>
+    <FormCardLogin v-if="showLogin" />
+    <FormCardSignup v-else />
+    <FormCardLinks @click="showLogin = true" />
   </div>
 </template>
 //bg = on-whine/red/black -- в зависимости от фона
@@ -12,16 +12,15 @@ import LogoFull from "@/components/elements/LogoFull.vue";
 import FormCardLinks from "@/components/elements/start-page/FormCardLinks.vue";
 import FormCardLogin from "@/components/elements/start-page/FormCardLogin.vue";
 import FormCardSignup from "@/components/elements/start-page/FormCardSignup.vue";
-import { ref } from 'vue'
+import { ref } from "vue";
 
 export default {
   components: { LogoFull, FormCardLinks, FormCardLogin, FormCardSignup },
-  
 
   name: "FormCard",
   setup() {
-    const showLogin = ref(true)
-    return {showLogin}
+    const showLogin = ref(true);
+    return { showLogin };
   }
 };
 </script>

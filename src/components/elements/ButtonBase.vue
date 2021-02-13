@@ -3,7 +3,7 @@
     :is="type"
     :href="href"
     :type="submit"
-    :class="['button', size, state, priority, font, disabled]"
+    :class="['button', size, priority, font, disabled]"
   >
     <icon-base class="icon">
       <Check />

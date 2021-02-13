@@ -12,10 +12,10 @@ import Input from "@/components/elements/InputBase.vue";
 // import vueConfig from "./vue.config";
 
 createApp(App)
-	.use(Icon)
-	.use(IconBase, { tagName: "icon-base" })
-	.use(Bttn, { tagName: "bttn" })
-	.use(Input, { tagName: "input" })
-	.use(store)
-	.use(router)
-	.mount("#app");
+  .use(Icon)
+  .use(IconBase, { tagName: "icon-base" })
+  .use(Bttn, { tagName: "bttn" })
+  .use(Input, { tagName: "input" })
+  .use(store)
+  .use(router)
+  .mount("#app");

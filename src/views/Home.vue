@@ -9,6 +9,7 @@
     >
     <img alt="Vue logo" src="../assets/logo.png" />
   </div>
+  <input v-model="test" />
 </template>
 
 <script>
