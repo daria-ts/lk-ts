@@ -8,7 +8,7 @@
     :disabled="disabled"
     :class="field"
     :value="modelValue"
-    :placeholder="label"
+    :placeholder="placeholder"
     @input="$emit('update:modelValue', $event.target.value)"
   />
    </component>
@@ -56,6 +56,10 @@ export default {
       validator: value => {
         return value.match(/(div|section)/);
       }
+    },
+      placeholder: {
+      type: String,
+      default: null
     },
     /**
      * Длина поля.
