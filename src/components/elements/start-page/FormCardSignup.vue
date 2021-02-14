@@ -18,7 +18,7 @@
         v-model="password"
         autocomplete="current-password"
       />
-      <bttn type="Submit" priority="extra">
+      <bttn :type="submit" priority="extra">
         Войти
       </bttn>
     </form>
@@ -36,6 +36,7 @@ export default {
     Input,
     Bttn
   },
+  
   setup() {
     //refs
     const userName = ref("");
@@ -51,7 +52,9 @@ export default {
       password,
       handleSubmit
     };
-  }
+    
+  },
+ 
 };
 </script>
 

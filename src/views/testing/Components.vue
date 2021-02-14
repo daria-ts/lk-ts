@@ -2,17 +2,18 @@
 <Header class="Header" />
 
 
-  <input-base  :type="text" width="auto" v-model="tester"/>
+  <input-base  :type="text" width="auto" v-model.lazy="tester"/>
   <FormCard/>
-  <h1> {{ counter}}</h1>
-  <Bttn @click="countplus">+1</Bttn>
-  <button v-on:click="countplus">+1</button>
+  <h1>{{title}} {{ counter}}</h1>
+  <Bttn @click="countplus(1, 'не сюда', $event)">+1</Bttn>
+  <button v-on:click="countplus(5, 'жми еще!', $event)">+1</button>
 
           </div>
           <div class="box">
-  <h1>{{tester}}</h1><h1>{{tester2}}</h1>
-  <input-base  :type="text"   v-model="tester"/>
-  <input type="text" v-model="tester2"/>
+  <h1>{{tester}}</h1>
+  <InputBase  :type="text" v-model="tester"/>
+  <h1 @mouseover="onHover">{{tester2}}</h1> 
+  <input type="text" v-model.lazy="tester2"/>
 </div>
 </template>
 
@@ -33,12 +34,22 @@ export default {
     return {
       tester: "tester",
       tester2: "test2",
-      counter: 0
+      counter: 0,
+      title: 'Жми!'
     }
   },
   methods: {
-    countplus: function() {
-      this.counter++
+    countplus: function(num, str, event) {
+      this.counter += num
+      this.title = str
+      if (num === 5) {
+        event.target.style.color = 'yellow'
+      }else if (num === 1) {
+        event.target.style.color = 'green'
+      }
+    },
+    onHover: function(event){
+      event.target.style.size = '40px'
     }
   }
 };
@@ -52,7 +63,7 @@ export default {
   top: 0;
 }
 .box{
-  background-color: aqua;
+  
   display: flex;
   flex-direction: column;
   background: $white;
@@ -63,5 +74,9 @@ export default {
     display: flex;
     width: 500px;
 }
-
+h1{
+  &.change {
+    color: $neutral-400;
+  }
+}
 </style>
