@@ -5,7 +5,6 @@
     :href="href"
     :type="submit"
     :class="['button', size, priority, font, disabled]"
-    
   >
     <icon-base class="icon">
       <Check />

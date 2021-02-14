@@ -26,9 +26,10 @@
 </template>
 
 <script>
-import Input from "@/components/elements/InputBase.vue";
-import Bttn from "@/components/elements/ButtonBase.vue";
-import { ref } from "vue";
+import Input from "@/components/elements/InputBase.vue"
+import Bttn from "@/components/elements/ButtonBase.vue"
+import { ref } from "vue"
+import useSignup from '@/composables/useSignup'
 
 export default {
   name: "FormCardSignup",
@@ -36,21 +37,22 @@ export default {
     Input,
     Bttn
   },
-  
   setup() {
+    const {error, signup} = useSignup
     //refs
     const userName = ref("");
-    const email = ref("");
-    const password = ref("");
+    const email = ref('')
+    const password = ref('')
 
-    const handleSubmit = () => {
-      console.log(userName.value, email.value, password.value);
+    const handleSubmit = async () => {
+      await signup(email.value, password.value, userName.value);
     };
     return {
       userName,
       email,
       password,
-      handleSubmit
+      handleSubmit,
+      error
     };
     
   },

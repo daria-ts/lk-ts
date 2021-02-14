@@ -17,7 +17,7 @@
         v-model="password"
         autocomplete="current-password"
       />
-      <bttn type="Submit" priority="extra">
+      <bttn :type="Submit" priority="extra">
         Войти
       </bttn>
     </form>
