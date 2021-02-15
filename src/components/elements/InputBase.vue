@@ -7,7 +7,7 @@
     <input
       v-bind="$attrs"
       :disabled="disabled"
-      :class="field"
+      
       :value="modelValue"
       :placeholder="placeholder"
       @input="$emit('update:modelValue', $event.target.value)"
