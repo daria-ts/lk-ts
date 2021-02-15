@@ -18,18 +18,16 @@
         v-model="password"
         autocomplete="current-password"
       />
-      <bttn :type="submit" priority="extra">
-        Войти
-      </bttn>
+      <Bttn :type="submit" priority="extra"> Войти </Bttn>
     </form>
   </div>
 </template>
 
 <script>
-import Input from "@/components/elements/InputBase.vue"
-import Bttn from "@/components/elements/ButtonBase.vue"
-import { ref } from "vue"
-import useSignup from '@/composables/useSignup'
+import Input from "@/components/elements/InputBase.vue";
+import Bttn from "@/components/elements/ButtonBase.vue";
+import { ref } from "vue";
+import useSignup from "@/composables/useSignup";
 
 export default {
   name: "FormCardSignup",
@@ -38,11 +36,11 @@ export default {
     Bttn
   },
   setup() {
-    const {error, signup} = useSignup
+    const { error, signup } = useSignup;
     //refs
     const userName = ref("");
-    const email = ref('')
-    const password = ref('')
+    const email = ref("");
+    const password = ref("");
 
     const handleSubmit = async () => {
       await signup(email.value, password.value, userName.value);
@@ -54,9 +52,7 @@ export default {
       handleSubmit,
       error
     };
-    
-  },
- 
+  }
 };
 </script>
 
