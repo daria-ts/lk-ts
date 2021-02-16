@@ -1,9 +1,8 @@
 <template>
   <component
     v-bind="$attrs"
-    :is="type"
+    :is="div"
     :href="href"
-    :type="submit"
     :class="['button', size, priority, font, disabled]"
   >
     <icon-base class="icon">
@@ -22,7 +21,7 @@ export default {
   name: "Bttn",
   components: { IconBase, Check },
   props: {
-    type: {
+    div: {
       //html element for  button:`button, a`
       type: String,
       default: "button",

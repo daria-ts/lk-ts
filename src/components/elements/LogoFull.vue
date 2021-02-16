@@ -4,7 +4,7 @@
       v-if="bg === 'logo-on-white'"
       width="15.125rem"
       height="1.5rem"
-      viewBox="0 0 15.125rem 1.5rem"
+      viewBox="0 0 242 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

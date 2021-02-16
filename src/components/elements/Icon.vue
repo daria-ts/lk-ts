@@ -4,7 +4,7 @@
       v-if="name === 'logo-apple'"
       width="1.5rem"
       height="1.5rem"
-      viewBox="0 0 1.5rem 1.5rem"
+      viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -17,7 +17,7 @@
       v-else-if="name === 'logo-android'"
       width="1.5rem"
       height="1.5rem"
-      viewBox="0 0 1.5rem 1.5rem"
+      viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -28,9 +28,9 @@
     </svg>
     <svg
       v-else-if="name === 'app-logo'"
-      width="$space-xl"
-      height="$space-xl"
-      viewBox="0 0 $space-xl $space-xl"
+      width="3rem"
+      height="3rem"
+      viewBox="0 0 48 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
