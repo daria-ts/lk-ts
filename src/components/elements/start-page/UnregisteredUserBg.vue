@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="left-block">
-    Личный кабинет создан по&nbsp;технологии <nobr>PWA-приложения:</nobr>
+    Личный кабинет создан по&nbsp;технологии <span style="white-space: nowrap;">PWA-приложения:</span>
   </div>
   <PwaList />
 </template>
