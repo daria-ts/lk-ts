@@ -3,7 +3,6 @@
     v-bind="$attrs"
     :is="div"
     :href="href"
-  
     :class="['button', size, priority, font, disabled]"
   >
     <icon-base class="icon">
